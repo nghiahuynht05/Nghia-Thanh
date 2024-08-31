@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="./wp-content/upload/icons8-wedding-16.png">
   <link rel="profile" href="https://gmpg.org/xfn/11">
-  <meta property="og:image" content="" />
+  <meta property="og:image" content="./wp-content/upload/VUQ_3612.JPG">
   <title>Đám cưới Trọng Nghĩa & Minh Thanh</title>
   <meta name='robots' content='max-image-preview:large' />
   <link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
@@ -909,7 +910,7 @@
             </div>
             <div class="gift-card">
               <div class="gift-qr">
-                <img src="./wp-content/upload/457026217_348907794854398_5900904764651034024_n.jpg" alt=""
+                <img src="./wp-content/upload/457305483_427796063622574_7890756033079223121_n.jpg" alt=""
                   class="groom_qr">
               </div>
               <div class="gift-body">
@@ -924,119 +925,6 @@
 
 
     </section>
-    <!-- FORM XÁC NHẬN -->
-    <!-- FROM XÁC NHẬN -->
-    <section id="form" class="form" style="display:none">
-      <div class="container">
-        <form action="" method="post" id="form-wedding"
-          style="background-image:url(https://static.vecteezy.com/system/resources/previews/016/407/415/original/paper-cut-sweet-pink-envelope-and-heart-with-copy-space-for-design-valentine-s-day-or-love-day-background-concept-send-a-letter-to-a-lover-couple-free-vector.jpg)">
-          <h2 class="section-title">Xác nhận tham dự</h2>
-          <p class="sub-title">Hãy cho chúng tôi biết bạn sẽ đến tham dự nhé!</p>
-          <div class="form-container">
-            <div class="group-radio">
-
-              <label class="radio-container">Luxury Place <span class="tooltip">
-                  <p>171 Nguyễn Thái Sơn , P8, Quận Gò Vấp</p>
-                </span>
-                <input type="radio" name="fav_language" id="nha_trai" value="Luxury Place">
-                <span class="checkmark"></span>
-              </label>
-
-              <label class="radio-container">White Place <span class="tooltip">
-                  <p>171 Nguyễn Thái Sơn , P8, Quận Gò Vấp</p>
-                </span>
-                <input type="radio" name="fav_language" id="nha_trai" value="White Place">
-                <span class="checkmark"></span>
-              </label>
-            </div>
-            <div class="group-input">
-              <label>Họ và Tên</label>
-              <input type="text" class="input" id="f_name" required="">
-            </div>
-
-            <div class="group-input">
-              <p class="group-title">Bạn sẽ đến tham dự chứ ?</p>
-              <div class="group-select">
-                <select name="" id="wedding-select">
-                  <option value="Tham dự">Có tôi sẽ đến </option>
-                  <option value="Không tham dự">Xin lỗi, tôi không tham dự được </option>
-                </select>
-                <i class='bx bx-chevron-down'></i>
-              </div>
-              <div class="group-select">
-                <select name="" id="num_user">
-                  <option value="1 Người">1 Người </option>
-                  <option value="2 Người">2 Người</option>
-                  <option value="3 Người">3 Người</option>
-                </select>
-                <i class='bx bx-chevron-down'></i>
-              </div>
-            </div>
-            <div class="group-input">
-              <label>Gửi lời chúc</label>
-              <textarea name="" id="f_text" cols="30" rows="4">Chúc 2 bạn trăm năm hạnh phúc
-          </textarea>
-            </div>
-            <div class="message-form">
-
-            </div>
-            <div class="group-input">
-              <button type="submit" class="wedding-submit">Xác nhận</button>
-            </div>
-          </div>
-
-        </form>
-      </div>
-    </section>
-
-    <script>
-      //XỬ LÝ FORM
-      $(document).ready(function () {
-        $('.message-form').fadeOut(300)
-        $('#form').on('submit', function (e) {
-          e.preventDefault();
-          f_userName = "Thành Trung-Thanh Hằng"
-          f_check = $('input[type="radio"]:checked').val()
-          f_name = $(this).find('#f_name').val()
-          f_numUser = $('#num_user').find('option:selected').val()
-          f_select = $('#wedding-select').find('option:selected').val()
-          f_text = $(this).find('#f_text').val()
-          var form_data = {
-            'entry.737056527': f_userName,
-            'entry.642873731': f_check,
-            'entry.1699210899': f_name,
-            'entry.369695229': f_numUser,
-            'entry.1528762541': f_select,
-            'entry.1679764871': f_text,
-          }
-          $('.wedding-submit[type="submit"]').text('Đang gửi ...')
-          $.ajax({
-            url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdD9g3WsFXklx1iJ2WTwnaKq7qXDh8fLcOetjSV8GMatzoWaA/formResponse",
-            type: "POST",
-            data: form_data,
-            dataType: "xml",
-            statusCode: {
-              0: function () {
-                mess_form = 'Chúng mình xin chân thành cám ơn !'
-                $('.message-form').html(mess_form)
-                $('button[type="submit"]').addClass('success')
-                $('button[type="submit"]').removeClass('btn_primary')
-                $('button[type="submit"]').attr('disabled', 'true')
-                $('button[type="submit"]').text('Đã xác nhận')
-                $('.message-form').fadeIn(300)
-              },
-              200: function () {
-                alert('200')
-              }
-            }
-          })
-        })
-        return false;
-      })
-    </script>
-    <!-- END FORM XÁC NHẬN -->
-
-
     <!-- THANKYOU -->
     <!-- THANK YOU -->
     <section id="thankyou" class="section-thankyou bg_overlay">
@@ -1044,7 +932,8 @@
         style="object-position:center center" />
       <div class="thankyou-body container">
         <h2 class="thankyou-title" data-aos="fade-up" data-aos-duration="2000">Thanhkyou</h2>
-        <p class="thankyou-des" data-aos="fade" data-aos-duration="3000">Sự hiện diện của quý vị là niềm vui và vinh
+        <p style="padding-top: 15px;" class="thankyou-des" data-aos="fade" data-aos-duration="3000">Sự hiện diện của quý
+          vị là niềm vui và vinh
           hạnh cho gia đình chúng tôi, Chân thành cám ơn !</p>
 
     </section>
@@ -1060,35 +949,35 @@
       <source src="./wp-content/music.mp3" type="audio/mpeg"></audio>
     <!-- END AUDIO -->
     <button class='toggleAudio'>
-      <i class='ri-volume-mute-fill'></i>
+      <i class='ri-volume-up-fill'></i>
     </button>
 
-    <script src="https://jejuwedding.net/wp-content/themes/wedding-studio/js/navigation.js?ver=1.0.0"
-      id="wedding-studio-navigation-js"></script>
+    <script src="./wp-content/themes/wedding-studio/js/navigation.js" id="wedding-studio-navigation-js">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?ver=1.0.0"
       id="fancybox js-js"></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js?ver=1.0.0" id="scrollrevea-js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?ver=1.0.0" id="swiper slide-js"></script>
-    <script src="https://jejuwedding.net/wp-content/themes/wedding-studio/js/preload.js?ver=1.0.0" id="preload-js">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js" id="scrollrevea-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" id="swiper slide-js"></script>
+    <script src="./wp-content/themes/wedding-studio/js/preload.js" id="preload-js">
     </script>
-    <script src="https://jejuwedding.net/wp-content/themes/wedding-studio/js/aos.js?ver=1.0.0" id="aos js-js"></script>
-    <script src="https://jejuwedding.net/wp-content/themes/wedding-studio/js/main-wedding1.js?ver=1.0.0"
-      id="main wedding-js"></script>
+    <script src="./wp-content/themes/wedding-studio/js/aos.js" id="aos js-js"></script>
     <script src="./wp-content/themes/wedding-studio/js/countdown.js" id="count-down js-js"></script>
-    <script src="./wp-includes/js/comment-reply.min.js?ver=6.6.1" id="comment-reply-js" async data-wp-strategy="async">
+    <script src="./wp-includes/js/comment-reply.min.js" id="comment-reply-js" async data-wp-strategy="async">
     </script>
     <script>
       // FANCY BOX
       Fancybox.bind("[data-fancybox]", {
-
       });
-      //AUDIO
+      //AUDIO ri-volume-mute-fill
       $(".toggleAudio").on("click", function () {
-        $(this).find("i").toggleClass("ri-volume-up-fill ")
         audio = $("#audio")
-        audio[0].paused ?
-          audio[0].play() :
-          audio[0].pause();
+        if (audio[0].paused) {
+          audio[0].play()
+          $(this).find("i").addClass("ri-volume-up-fill").removeClass("ri-volume-mute-fill")
+        } else {
+          audio[0].pause()
+          $(this).find("i").addClass("ri-volume-mute-fill").removeClass("ri-volume-up-fill")
+        }
       })
 
       var swiper1 = new Swiper(".album-slide", {
